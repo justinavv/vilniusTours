@@ -1,0 +1,53 @@
+@media all and (min-width: 661px) and (max-width: 900px){    
+    .tours .column,
+    .guides .column{
+		width: 48%;
+	}
+    .guides img{
+        max-width: 50%;
+    }  
+    .menu a{
+        padding: 30px 10px 35px ;  
+    }
+}
+ 
+@media all and (max-width: 660px){
+	.tours .column,
+    .guides .column{
+		width: 100%;
+	}
+//    .menu a,
+//    .social-nav a,
+//    {
+//        padding: 0 5px;  
+//    }
+//    .navigation{
+//            padding: 0;
+//    }
+//    
+    .hero-container{
+        max-width: 80%;
+    } 
+         
+    /////******W3 schools
+    .navigation a:not(:active) {display: none;}
+    .navigation a.icon {
+    float: right;
+    display: block;
+    }
+    .navigation.responsive {position: relative;}
+    .navigation.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .navigation.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+}
+
+ 
+

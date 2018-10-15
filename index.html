@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<!--    prideti kalbu veliavas!-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="vieport" content="width=device-width, initial-scale-1">
+        <title>Welcome to Vilnius!</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css"> 
+    </head>
+
+    <body>
+<!--HERO start-->
+        <section class="hero">
+            <div class="overlay">
+                <div class="container flex-container"> <!--flex-container ar jo reikia???--> 
+                       <div class="hero-content">
+                           <h1>Welcome to Vilnius!</h1>
+                           <h2>Get the most out of your visit!</h2>
+                       </div>   
+                </div>    
+            </div>
+        </section>
+<!--HERO end-->
+        
+<!--Header start-->
+        <header class="navigation">
+            <div class="container flex-container">
+                <nav class="menu">
+                    <ul class="flex-container">
+                        <li>
+                            <a href="#whoweare">Who we are</a>
+                        </li>
+                        <li>
+                            <a href="#tours">Our Tours</a>
+                        </li>
+                        <li>
+                            <a href="#guides">Tour guides</a>
+                        </li> 
+                        <li>
+                            <a href="#contact">Contact us</a>
+                        </li>
+                    </ul>    
+                </nav>
+                <nav class="social-nav">
+                    <ul class="flex-container">
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank">
+                                 <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+<!--
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+-->
+                </nav>
+            </div>
+        </header>
+<!--Header end-->
+        
+<!--Services start-->
+
+        <section id="whoweare" class="container"> <!-- gal cia reikia irgi flex-container? -->
+            <div>
+                <h2>Who we are?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+        </section>
+        <section id="tours" class="container">
+            <div class="tours">
+                <h2>Our tours</h2>
+                    <div class="flex-container">
+                        <div class="column">
+                            <h3>Walking Vilnius tour</h3>
+                                <p>Classic tour around Vilnius old town to get to know the capital of Lithuania. The tour takes about 2.5 hours but you will talk about it for ages.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Bus tour to Trakai</h3>
+                               <p>If you're in Vilnius day trip to Trakai is also a must. Small town with two castles where one of them is based on island on the lake. Tasty Karaite pastries included. We'll also explain you about Karaites.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Pub Crawl</h3>
+                               <p>You've seen everything now and you just want to relax and have Lithuanian beer in fun local pubs? We have tour for that too!</p>
+                        </div>
+                        <div class="column">
+                            <h3>More to come!</h3>
+                               <p>We are also planning some new tours. Let us know if you wish to visit anything in Lithuania, we might arrange a special tour too!</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+<!--Services end-->
+
+<!--Tour guides start-->
+        <section id="guides" class="container">
+            <div class="guides">
+                <h2>Meet our guides</h2>
+                    <div class="flex-container">
+                        <div class="column">
+                            <h3>Justina</h3>
+                                <img src="assets/images/justina.jpg" alt="vilnius tour guide">
+                                <p>Justina is a tour guides since 2016. Besides her love to Vilnius, she's also is interested in programming.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Slyva</h3>
+                                <img src="assets/images/cat.jpg" alt="tour guide cat">
+                                <p>Slyva is here just to keep a place for a future tour guide. She's a nice cat but doesn't really know much about Vilnius. </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+<!--Contact us-->
+        <section id="contact" class="container flex-container">
+            <div class="contact">
+                <h2>Contact us!</h2>
+                    <div class="container">
+<!--****PHP***** <form action="/action_page.php">-->
+                        <label for="fname">Your name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="What's your name?">
+                        <label for="email">Email</label>
+                             <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <label for="date">Date of your visit</label>
+                            <input type="text" id="date" name="date" placeholder="Please enter the date of the possible booking dd/mm/yyyy">
+                        <label for="questions">Questions</label>
+                            <input type="text" id="questions" name="questions" placeholder="Please let us know your questions!">
+                        <input type="submit" value="Submit">
+<!--******************</form>-->
+                    </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                    <p>Let's discover Vilnius together!</p>
+                    <p>Want to send us an email? <a href="mailto:email@email">email@email.com</a></p>
+                    <p>Or maybe call us?<a href="callto:+3700000000">+3700000000</a></p>
+                    <p>Vilnius, Lithuania 2018</p>
+            </div>
+        </footer>
+        <script>function myFunction() {
+    var x = document.getElementById("navigation");
+    if (x.className === "navigation") {
+        x.className += " responsive";
+    } else {
+        x.className = "navigation";
+    }
+}</script>
+    </body>
+</html>
