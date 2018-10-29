@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html>
-
-<!--    prideti kalbu veliavas!-->
     <head>
         <meta charset="utf-8">
-        <meta name="vieport" content="width=device-width, initial-scale-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Welcome to Vilnius!</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css"> 
     </head>
 
     <body>
 <!--HERO start-->
         <section class="hero">
-            <div class="overlay">
-                <div class="container flex-container"> <!--flex-container ar jo reikia???--> 
-                       <div class="hero-content">
-                           <h1>Welcome to Vilnius!</h1>
-                           <h2>Get the most out of your visit!</h2>
-                       </div>   
-                </div>    
-            </div>
+            <!--languages start-->
+              <div class="container">             
+                <div class="langnav">
+                    <ul class="languages flex-container">
+                        <li>
+                            <a rel="alternate" href="#">
+                                English</a>
+                        </li>
+                        <li>
+                            <a rel="alternate" href="#">
+                                Français</a>
+                        </li>
+                        <li>
+                            <a rel="alternate" href="#">
+                                Русский</a>
+                        </li>
+                        <li>
+                            <a rel="alternate" href="#">
+                                Polski</a>
+                        </li>
+                        <li>
+                            <a rel="alternate" href="#">
+                                Lietuvių</a>
+                        </li>
+                    </ul>
+                </div>
+           <!--languages end-->
+                <div class="flex-container">
+                    <div class="hero-content">
+                        <h1>Welcome to Vilnius!</h1>
+                        <h4>Get the most out of your visit!</h4>
+                    </div>
+                </div>   
+            </div>    
         </section>
 <!--HERO end-->
         
 <!--Header start-->
-        <header class="navigation">
-            <div class="container flex-container">
+        <header class="navigation" id="navbar">
+            <div class="container flex-container">  
                 <nav class="menu">
+                    <a class="burger" onclick=burger()>
+                        <i class="fa fa-bars"></i>
+                    </a>
                     <ul class="flex-container">
                         <li>
                             <a href="#whoweare">Who we are</a>
@@ -57,17 +84,12 @@
                             </a>
                         </li>
                     </ul>
-<!--
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
--->
                 </nav>
             </div>
         </header>
 <!--Header end-->
         
 <!--Services start-->
-
         <section id="whoweare" class="container"> <!-- gal cia reikia irgi flex-container? -->
             <div>
                 <h2>Who we are?</h2>
@@ -117,25 +139,25 @@
                     </div>
             </div>
         </section>
-<!--Contact us-->
+<!--Tour guides end-->
+        
+<!--Contact us form start-->
         <section id="contact" class="container flex-container">
-            <div class="contact">
+            <form class="contact">
                 <h2>Contact us!</h2>
-                    <div class="container">
-<!--****PHP***** <form action="/action_page.php">-->
-                        <label for="fname">Your name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="What's your name?">
-                        <label for="email">Email</label>
-                             <input type="email" id="email" name="email" placeholder="Enter your email">
-                        <label for="date">Date of your visit</label>
-                            <input type="text" id="date" name="date" placeholder="Please enter the date of the possible booking dd/mm/yyyy">
-                        <label for="questions">Questions</label>
-                            <input type="text" id="questions" name="questions" placeholder="Please let us know your questions!">
-                        <input type="submit" value="Submit">
-<!--******************</form>-->
-                    </div>
-            </div>
+                    <label>Your name</label>
+                        <input type="text" name="firstname" placeholder="What's your name?">
+                    <label>Email</label>
+                         <input type="email" name="email" placeholder="Enter your email">
+                    <label>Date of your visit</label>
+                        <input type="text" name="date" placeholder="Please enter the date of the possible booking dd/mm/yyyy">
+                    <label>Questions</label>
+                        <textarea name="questions" rows=10 placeholder="Please let us know your questions!"></textarea>
+                    <input type="submit" value="Submit">
+            </form>
         </section>
+<!--Contact us form end-->
+        
         <footer>
             <div class="container">
                     <p>Let's discover Vilnius together!</p>
@@ -144,13 +166,8 @@
                     <p>Vilnius, Lithuania 2018</p>
             </div>
         </footer>
-        <script>function myFunction() {
-    var x = document.getElementById("navigation");
-    if (x.className === "navigation") {
-        x.className += " responsive";
-    } else {
-        x.className = "navigation";
-    }
-}</script>
+        
+<!--responsive-->
+       <script src="assets/scripts/custom.js"></script> 
     </body>
 </html>

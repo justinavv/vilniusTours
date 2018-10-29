@@ -1,21 +1,38 @@
-//kodel chrome inspektorius rodo nesumazintus kai ziuri kai per telefona?
-
 *,
 *::before,
 *::after{
-	box-sizing: border-box;
-  //  border: 1px solid red;  
+    box-sizing: border-box;
+//    border: 1px solid red;  
 }
 
 $theme: #efb294;
 $darker: #db7557;
 $text: #999;
 
+
+@mixin links{
+    color: #fff;
+    text-decoration: none;
+}
+ 
+@mixin shadow{
+    text-shadow: 0 2px 2px #000;
+}
+
+@mixin columns{
+	text-align: center;
+    width: 23%;
+}
+
 body,
 ul
     {
     margin: 0;  
     padding: 0;  
+}
+
+body{
+    background-color: #fff;
 }
 
 html{
@@ -44,47 +61,68 @@ section{
 	background-image: url("../../assets/images/1.jpg"); 
 	background-size: cover; 
 	background-position: center; 
-    opacity: 0.75; //ar cia palikt opacity?
+    opacity: 0.75; // ar cia palikt opacity?
     padding: 0;
+    min-height: 90vh;
 }
 
-.hero .container{
-    min-height: 90vh;
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 100px 0;
+.hero .hero-content{ 
+    padding: 200px 0;
 }
+
+/*language navigation*/
+.languages{
+    padding: 10px;
+}
+
+.languages li{
+    list-style: none;
+    
+    a{
+        @include links;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        padding: 5px;
+        border: 1px solid #fff;
+        @include shadow;
+    } 
+    &:hover {
+    font-size: 1rem;
+    font-weight: 700;
+    }  
+}
+/*end language navigation*/
 
 .hero-content{
     text-align: center;
     color: #fff; 
-    text-shadow: 0 2px 2px #000;
     line-height: 1;
+    @include shadow;
     h1{
         font-size: 4rem; 
         margin: 0;
         font-family: 'Roboto Slab', serif;
-        
         &::after{ 
             content: ""; 
             display: block; 
-            width: 440px;
+            width: 240px;
             border-bottom: 2px solid #fff; 
             margin: 0 auto 20px;
             padding-bottom: 20px;
             }
     }
-    
-    h2{
-        font-size: 2rem; 
-        font-weight: 600;
+    h4{
+        font-size: 1.75rem; 
+        font-weight: 700;
     }
 }
 /*end hero content*/
 
 /*start navigation*/
+.burger {
+    display: none;
+}
+ 
 .navigation{ 
     background-color: $theme;
     justify-content: space-between;
@@ -99,10 +137,8 @@ section{
 }
 
 .navigation a{
-    color: #fff;
-    text-decoration: none;
+    @include links;
     text-transform: uppercase;
-    font-weight: 300;
     
     &:hover {
     background-color: $darker;
@@ -129,6 +165,7 @@ h2{
     font-size: 1.75rem;
     border-left: 6px solid $darker;
     padding: 3px;
+    font-weight: 700;
 }
 
 h3{
@@ -136,16 +173,11 @@ h3{
     font-size: 1.5rem;
 }
 
-@mixin columns{
-	text-align: center;
-    width: 23%;
-}
-    
 .tours .column,
 .guides .column{
     @include columns;
 }
-    
+
 
 .guides img{
     max-width: 80%;
@@ -158,13 +190,11 @@ h3{
             {
     flex-wrap: wrap;
 }
-
 /*content end*/
 
 /*start of contact box*/
 input, 
-select,
-textarea,{
+textarea{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -180,7 +210,7 @@ input[type=submit] {
     width: 20%;
     color: $text;
     background-color: #fff;
-    padding: 12px 20px;
+    padding: 12px 10px;
     margin: 10px 40% 20px;
     border: 3px solid $theme;
     border-radius: 4px;
@@ -192,24 +222,6 @@ input[type=submit] {
         border: 3px solid $darker;    
     }  
 } 
-
-
-
-/// ***** W3 schools
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
-///// END ***** W3 schools
-
-
-
 /*end of contact box*/
 
 /*footer start*/
