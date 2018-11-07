@@ -1,3 +1,2 @@
-#Creating a webpage for tour guides in Vilnius
-The webpage is not going live, this is just to practise 
-
+#Final project for Web Development Bootcamp.
+Besides the code, I have also designed the page.
